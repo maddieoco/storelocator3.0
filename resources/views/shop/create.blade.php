@@ -33,8 +33,6 @@
                         {{ method_field('PATCH') }}
                       @endif
 
-                      <input type="hidden" name="lat" id="lat" value="{{isset($shop)?$shop->lat : ''}}">
-                      <input type="hidden" name="lng" id="lng" value="{{isset($shop)?$shop->lng : ''}}">
                       <div class="row">
                         <div class="col">
                           <div class="form-group">
@@ -82,6 +80,21 @@
                           <div class="form-group">
                               <label>ZIP</label>
                               <input type="text" class="form-control" name="zip" value="{{isset($shop)?$shop->zip : ''}}">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                              <label>Latitude</label>
+                              <input type="text" class="form-control" name="lat" id="lat" value="{{isset($shop)?$shop->lat : ''}}">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-group">
+                              <label>Longitude</label>
+                              <input type="text" class="form-control" name="lng" id="lng" value="{{isset($shop)?$shop->lng : ''}}">
                           </div>
                         </div>
                       </div>

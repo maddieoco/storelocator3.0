@@ -69,24 +69,22 @@ class HomeController extends Controller
         // ]);
         
         // foreach ($locations as $key => $location) {
-        //     if ($key >412) {
-        //         $address=$location['Company'].', '.($location['Address1'] !='' ? $location['Address1'] : $location['Address2']);
-        //         try {
-        //             $result=$geocoding->getByAddress($address);
-        //         } catch (\Throwable $th) {
-        //             // $results=$geocoding->getByAddress($address);
-        //             // dd($location,$result);
-        //         }
-                
-        //         $shop=Shop::create(array_change_key_case($location, CASE_LOWER));
-        //         if ($result->count()) {
-        //             $result = $result->current()->getGeometry()->getLocation();
-        //             $shop->lat=$result->getLat();
-        //             $shop->lng=$result->getLng();
-        //         }
-                
-        //         $shop->save();
+        //     $address=$location['Company'].', '.($location['Address1'] !='' ? $location['Address1'] : $location['Address2']).', '.$location['City'].', '.$location['State'];
+        //     try {
+        //         $result=$geocoding->getByAddress($address);
+        //     } catch (\Throwable $th) {
+        //         // $results=$geocoding->getByAddress($address);
+        //         // dd($location,$result);
         //     }
+            
+        //     $shop=Shop::create(array_change_key_case($location, CASE_LOWER));
+        //     if ($result->count()) {
+        //         $result = $result->current()->getGeometry()->getLocation();
+        //         $shop->lat=$result->getLat();
+        //         $shop->lng=$result->getLng();
+        //     }
+            
+        //     $shop->save();
             
         // }
 

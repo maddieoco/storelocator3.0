@@ -83,6 +83,13 @@
 
         //initialize map on document ready
         $(document).ready(function(){
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+            
             var latlng = new google.maps.LatLng(40.723080, -73.984340); //you can use any location as center on map startup
             var myOptions = {
                 zoom: 1,
@@ -218,7 +225,7 @@
                             +'<div class="card-body">'
                                 +'<h5 class="card-title">'+location.company+'</h5>'
                                 +'<p class="card-text">'+location.address1+'</p>'
-                                +'<p class="card-text">'+location.country+', '+location.city+', '+location.state+' '+location.zip+'</p>'
+                                +'<p class="card-text">'+location.city+', '+location.state+' '+location.zip+'</p>'
                                 +'<p class="card-text">'+location.phone1+'</p>'
                                 +'<p class="card-text">'+location.email+'</p>'
                                 +'<a href="#" onclick="showMarkerContent('+marker_index+')" class="btn btn-sm btn-outline-secondary">Show on map</a>'

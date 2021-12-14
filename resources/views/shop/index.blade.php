@@ -42,6 +42,8 @@
                                 <td>{{$item->state ?? ''}}</td>
                                 <td>{{$item->zip ?? ''}}</td>
                                 <td>{{$item->country ?? ''}}</td>
+                                <td>{{$item->lat ?? ''}}</td>
+                                <td>{{$item->lng ?? ''}}</td>
                                 <td>{{$item->email ?? ''}}</td>
                                 <td>{{$item->phone1 ?? ''}}</td>
                                 <td>{{$item->type ?? ''}}</td>

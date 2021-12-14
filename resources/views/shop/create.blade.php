@@ -147,6 +147,15 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqhqN5q545cx57GD5ht6JVidUQuuGd34&sensor=false&v=3&libraries=geometry,places&callback=initAutocomplete" async defer></script>
 <script type="text/javascript">
+  $(document).ready(function() {
+    $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
+  
   var country,city,state,zipcode,address;
 
   function initializeAutocompleteLocOne(){

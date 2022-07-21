@@ -239,7 +239,7 @@
             password: $('#password').val(),
         }
         $.ajax({
-            url: window.location.origin+'/signin',
+            url: window.location.origin+'/backend/public/signin',
             type: 'POST',
             data: formData,
             success: function (res) {
@@ -247,7 +247,7 @@
                 $('.login__').show();
                 $('.load').addClass('d-none');
                 if (res.status=='success') {
-                    window.location.href = window.location.origin+'/dashboard';
+                    window.location.href = window.location.origin+'/backend/public/dashboard';
                 }
                 else if(res.status=='error') {
                     var errorString = '<ul>';

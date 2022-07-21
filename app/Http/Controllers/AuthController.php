@@ -62,7 +62,7 @@ class AuthController extends Controller
             return response()->json($success, 200);
         }
 
-        return response()->json(['status' => 'error','data' => $errors]);
+        return response()->json(['status' => 'error','data' => 'data']);
          
     }
     
@@ -74,7 +74,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/login');
+        return redirect('http://store-locator.atdemo.live/');
 
     }
 
